@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Auth -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.receiptvault.ui.auth.LoginFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.receiptvault.ui.auth.SignupFragment"
+        android:label="Create Account"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Main: Home -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.receiptvault.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <!-- Scanner -->
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.receiptvault.ui.scanner.ScannerFragment"
+        android:label="Scan Receipt"
+        tools:layout="@layout/fragment_scanner">
+        <action
+            android:id="@+id/action_scannerFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+        <argument
+            android:name="imagePath"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.receiptvault.ui.scanner.ConfirmationFragment"
+        android:label="Review Receipt"
+        tools:layout="@layout/fragment_confirmation">
+        <argument
+            android:name="imagePath"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_confirmationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- History -->
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.receiptvault.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history">
+        <action
+            android:id="@+id/action_historyFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <!-- Detail -->
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.receiptvault.ui.detail.DetailFragment"
+        android:label="Receipt Detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="receiptId"
+            app:argType="integer" />
+    </fragment>
+
+    <!-- Analytics -->
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.receiptvault.ui.analytics.AnalyticsFragment"
+        android:label="Analytics"
+        tools:layout="@layout/fragment_analytics" />
+
+</navigation>

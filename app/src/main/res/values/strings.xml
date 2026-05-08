@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Receipt Vault</string>
+    <string name="scan_receipt">Scan Receipt</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="analytics">Analytics</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="merchant">Merchant</string>
+    <string name="amount">Amount</string>
+    <string name="date">Date</string>
+    <string name="category">Category</string>
+    <string name="notes">Notes</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="no_receipts">No receipts yet. Tap + to add your first!</string>
+</resources>
