@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
@@ -17,7 +16,8 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:layout_marginBottom="16dp"
-            android:background="@color/surface" />
+            android:background="@color/surface"
+            android:contentDescription="@string/content_desc_receipt_preview" />
 
         <ProgressBar
             android:id="@+id/progress_bar"
@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Review &amp; Edit"
+            android:text="@string/title_review_edit"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/textPrimary"
@@ -39,7 +39,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Merchant Name"
+            android:hint="@string/hint_merchant_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginBottom="12dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -51,7 +51,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Date (YYYY-MM-DD)"
+            android:hint="@string/hint_date_format"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginBottom="12dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -63,7 +63,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Amount"
+            android:hint="@string/hint_amount"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginBottom="12dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -76,7 +76,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category"
+            android:text="@string/label_category"
             android:textSize="12sp"
             android:textColor="@color/textSecondary"
             android:layout_marginBottom="4dp" />
@@ -91,7 +91,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Notes (optional)"
+            android:hint="@string/hint_notes_optional"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginBottom="20dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -112,7 +112,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="52dp"
-                android:text="Discard"
+                android:text="@string/btn_discard"
                 android:layout_marginEnd="8dp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
@@ -121,7 +121,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="52dp"
-                android:text="Save Receipt"
+                android:text="@string/btn_save_receipt"
                 android:layout_marginStart="8dp" />
         </LinearLayout>
 

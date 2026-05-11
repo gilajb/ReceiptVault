@@ -4,17 +4,17 @@
 
     <item
         android:id="@+id/action_account"
-        android:title="Account"
+        android:title="@string/menu_account"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_sign_out"
-        android:title="Sign Out"
+        android:title="@string/menu_sign_out"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_sync"
-        android:title="Sync Now"
+        android:title="@string/menu_sync"
         app:showAsAction="never" />
 
 </menu>

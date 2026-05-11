@@ -65,7 +65,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.tvViewAll.setOnClickListener {
-            findNavController().navigate(R.id.historyFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_historyFragment)
         }
     }
 

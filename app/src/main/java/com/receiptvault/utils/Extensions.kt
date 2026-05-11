@@ -17,7 +17,11 @@ fun Fragment.showToast(message: String) {
 }
 
 fun Double.toCurrencyString(): String {
-    return NumberFormat.getCurrencyInstance(Locale.getDefault()).format(this)
+    val format = java.text.NumberFormat.getCurrencyInstance(java.util.Locale("en", "KE"))
+    val symbols = (format as java.text.DecimalFormat).decimalFormatSymbols
+    symbols.currencySymbol = "KSh"
+    format.decimalFormatSymbols = symbols
+    return format.format(this)
 }
 
 fun String.toDisplayDate(): String {

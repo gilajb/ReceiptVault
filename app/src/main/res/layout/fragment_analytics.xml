@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:baselineAligned="false"
             android:layout_marginBottom="16dp">
 
             <ImageButton
@@ -24,14 +25,14 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_arrow_back"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Previous month" />
+                android:contentDescription="@string/desc_prev_month" />
 
             <TextView
                 android:id="@+id/tv_month"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Month Year"
+                android:text="@string/placeholder_month_year"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/textPrimary"
@@ -43,7 +44,7 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_arrow_forward"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Next month" />
+                android:contentDescription="@string/desc_next_month" />
         </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
@@ -57,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:baselineAligned="false"
                 android:padding="16dp">
 
                 <LinearLayout
@@ -67,14 +69,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Spent"
+                        android:text="@string/label_total_spent"
                         android:textSize="12sp"
                         android:textColor="@color/textSecondary" />
                     <TextView
                         android:id="@+id/tv_monthly_total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$0.00"
+                        android:text="@string/value_default_total"
                         android:textSize="22sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary" />
@@ -88,14 +90,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Receipts"
+                        android:text="@string/label_receipts"
                         android:textSize="12sp"
                         android:textColor="@color/textSecondary" />
                     <TextView
                         android:id="@+id/tv_receipt_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="@string/value_default_count"
                         android:textSize="22sp"
                         android:textStyle="bold"
                         android:textColor="@color/textPrimary" />
@@ -119,7 +121,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Spending by Category"
+                    android:text="@string/title_spending_category"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/textPrimary"
@@ -148,7 +150,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Category Breakdown"
+                    android:text="@string/title_category_breakdown"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/textPrimary"
@@ -177,7 +179,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Budget Tracker"
+                    android:text="@string/title_budget_tracker"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/textPrimary"
@@ -193,7 +195,7 @@
                         android:id="@+id/tvBudgetCategory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Category"
+                        android:text="@string/label_category"
                         android:textStyle="bold" />
 
                     <ProgressBar
@@ -207,7 +209,7 @@
                         android:id="@+id/tvBudgetAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$0 / $0"
+                        android:text="@string/budget_default_val"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -217,7 +219,7 @@
             android:id="@+id/btn_export_csv"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:text="Export as CSV"
+            android:text="@string/btn_export_csv"
             android:layout_marginBottom="80dp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 

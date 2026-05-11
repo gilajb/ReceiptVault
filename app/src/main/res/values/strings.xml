@@ -20,4 +20,92 @@
     <string name="share">Share</string>
     <string name="export_csv">Export CSV</string>
     <string name="no_receipts">No receipts yet. Tap + to add your first!</string>
+    <string name="title_account">User Account</string>
+    <string name="user_email_placeholder">user@example.com</string>
+    <string name="action_sign_out">Sign Out</string>
+    <string name="desc_profile_picture">Profile Picture</string>
+    <string name="filter_by_date_range">Filter by Date Range</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="date_format_hint">YYYY-MM-DD</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_apply">Apply</string>
+    <string name="desc_prev_month">Previous month</string>
+    <string name="desc_next_month">Next month</string>
+    <string name="placeholder_month_year">Month Year</string>
+    <string name="label_total_spent">Total Spent</string>
+    <string name="value_default_total">$0.00</string>
+    <string name="label_receipts">Receipts</string>
+    <string name="value_default_count">0</string>
+    <string name="title_spending_category">Spending by Category</string>
+    <string name="title_category_breakdown">Category Breakdown</string>
+    <string name="title_budget_tracker">Budget Tracker</string>
+    <string name="label_category">Category</string>
+    <string name="budget_format">%1$s / %2$s</string>
+    <string name="budget_default_val">$0 / $0</string>
+    <string name="btn_export_csv">Export as CSV</string>
+    <string name="title_review_edit">Review &amp; Edit</string>
+    <string name="hint_merchant_name">Merchant Name</string>
+    <string name="hint_date_format">Date (YYYY-MM-DD)</string>
+    <string name="hint_amount">Amount</string>
+    <string name="hint_notes_optional">Notes (optional)</string>
+    <string name="btn_discard">Discard</string>
+    <string name="btn_save_receipt">Save Receipt</string>
+    <string name="content_desc_receipt_preview">Preview of the scanned receipt</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_save_changes">Save Changes</string>
+    <string name="label_merchant">Merchant</string>
+    <string name="label_amount">Amount</string>
+    <string name="label_date">Date</string>
+    <string name="label_notes">Notes</string>
+    <string name="content_desc_receipt_image">Full view of the scanned receipt</string>
+    <string name="btn_date_filter">Dates</string>
+    <string name="btn_clear_filters">Clear</string>
+    <string name="empty_receipts_message">No receipts found</string>
+    <string name="search_hint_merchant">Search by merchant…</string>
+
+    <plurals name="receipt_count">
+        <item quantity="zero">0 receipts</item>
+        <item quantity="one">1 receipt</item>
+        <item quantity="other">%d receipts</item>
+    </plurals>
+
+    <string name="desc_app_logo">Logo</string>
+    <string name="app_name_vault">Receipt Vault</string>
+    <string name="app_tagline">Smart Receipt Scanner &amp; Tracker</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="btn_google_sign_in">Continue with Google</string>
+    <string name="label_no_account">Don\'t have an account? </string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="desc_back">Back</string>
+    <string name="title_scan_receipt">Scan Receipt</string>
+    <string name="label_camera_guide">Position receipt within the frame</string>
+    <string name="title_create_account">Create Account</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="label_already_have_account">Already have an account? </string>
+    <string name="btn_sign_in_small">Sign In</string>
+    <string name="label_budget_category_default">Category</string>
+    <string name="budget_amount_format">%1$s / %2$s</string>
+    <string name="budget_amount_default">$0 / $70000</string>
+    <string name="placeholder_merchant">Merchant</string>
+    <string name="placeholder_date">Date</string>
+    <string name="placeholder_category">Category</string>
+    <string name="placeholder_amount_zero">$0.00</string>
+    <string name="label_separator">" • "</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_history">History</string>
+    <string name="menu_analytics">Analytics</string>
+    <string name="menu_account">Account</string>
+    <string name="menu_sign_out">Sign Out</string>
+    <string name="menu_sync">Sync Now</string>
+
+
+
+
+
 </resources>

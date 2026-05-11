@@ -44,14 +44,14 @@ class AnalyticsViewModel @Inject constructor(
 
     // Budget limits per category (could be user-configurable in future)
     val budgetLimits = mapOf(
-        "Food & Dining" to 300.0,
-        "Groceries" to 400.0,
-        "Transport" to 150.0,
-        "Shopping" to 200.0,
-        "Healthcare" to 100.0,
-        "Utilities" to 200.0,
-        "Entertainment" to 100.0,
-        "Travel" to 500.0,
-        "Other" to 100.0
+        "Food & Dining" to 30000.0,
+        "Groceries" to 40000.0,
+        "Transport" to 15000.0,
+        "Shopping" to 200000.0,
+        "Healthcare" to 1000000.0,
+        "Utilities" to 20000.0,
+        "Entertainment" to 10000.0,
+        "Travel" to 50000.0,
+        "Other" to 100000.0
     )
 }

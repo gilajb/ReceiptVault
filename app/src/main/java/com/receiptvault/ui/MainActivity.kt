@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 1. Setup Toolbar
+        setSupportActionBar(binding.topAppBar)
+
+        // 2. Setup Navigation
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
@@ -38,27 +42,26 @@ class MainActivity : AppCompatActivity() {
         val appBarConfig = AppBarConfiguration(
             setOf(R.id.homeFragment, R.id.historyFragment, R.id.analyticsFragment)
         )
+
         setupActionBarWithNavController(navController, appBarConfig)
         binding.bottomNavView.setupWithNavController(navController)
 
-        // Show/hide bottom nav based on destination
+        // 3. Bottom Nav Visibility Listener
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.loginFragment,
-                R.id.signupFragment,
-                R.id.scannerFragment,
-                R.id.confirmationFragment -> {
+                R.id.loginFragment, R.id.signupFragment,
+                R.id.scannerFragment, R.id.confirmationFragment -> {
                     binding.bottomNavView.visibility = View.GONE
                 }
-                else -> {
-                    binding.bottomNavView.visibility = View.VISIBLE
-                }
+                else -> binding.bottomNavView.visibility = View.VISIBLE
             }
         }
 
-        // Redirect to login if not authenticated
-        if (auth.currentUser == null) {
-            navController.navigate(R.id.loginFragment)
+        // 4. Initial Auth Check (Only on fresh launch)
+        if (savedInstanceState == null) {
+            if (auth.currentUser == null) {
+                navController.navigate(R.id.loginFragment)
+            }
         }
     }
 
@@ -69,6 +72,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            R.id.action_account -> {
+                navController.navigate(R.id.accountFragment)
+                true
+            }
             R.id.action_sign_out -> {
                 auth.signOut()
                 navController.navigate(R.id.loginFragment)
@@ -86,4 +93,4 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
-}
+} // This brace must be the very last thing in the file

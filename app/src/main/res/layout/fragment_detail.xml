@@ -15,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:scaleType="centerCrop"
-            android:background="@color/surface" />
+            android:background="@color/surface"
+            android:contentDescription="@string/content_desc_receipt_image" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,19 +31,19 @@
                 android:layout_gravity="center"
                 android:visibility="gone" />
 
-            <!-- Action buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:baselineAligned="false"
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_edit"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp"
-                    android:text="Edit"
+                    android:layout_height="48dp"
+                    android:text="@string/btn_edit"
                     android:textSize="13sp"
                     android:layout_marginEnd="4dp"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
@@ -51,8 +52,8 @@
                     android:id="@+id/btn_share"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp"
-                    android:text="Share"
+                    android:layout_height="48dp"
+                    android:text="@string/btn_share"
                     android:textSize="13sp"
                     android:layout_marginHorizontal="4dp"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
@@ -61,14 +62,13 @@
                     android:id="@+id/btn_delete"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp"
-                    android:text="Delete"
+                    android:layout_height="48dp"
+                    android:text="@string/btn_delete"
                     android:textSize="13sp"
                     android:layout_marginStart="4dp"
                     app:backgroundTint="@color/error" />
             </LinearLayout>
 
-            <!-- VIEW MODE -->
             <LinearLayout
                 android:id="@+id/group_view_mode"
                 android:layout_width="match_parent"
@@ -89,37 +89,38 @@
                         android:padding="16dp">
 
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Merchant" android:textSize="11sp" android:textColor="@color/textSecondary" />
+                            android:text="@string/label_merchant" android:textSize="11sp" android:textColor="@color/textSecondary" />
                         <TextView android:id="@+id/tv_merchant" android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:textSize="20sp" android:textStyle="bold"
                             android:textColor="@color/textPrimary" android:layout_marginBottom="12dp" />
 
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Amount" android:textSize="11sp" android:textColor="@color/textSecondary" />
+                            android:text="@string/label_amount" android:textSize="11sp" android:textColor="@color/textSecondary" />
                         <TextView android:id="@+id/tv_amount" android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:textSize="24sp" android:textStyle="bold"
                             android:textColor="@color/colorPrimary" android:layout_marginBottom="12dp" />
 
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:baselineAligned="false">
                             <LinearLayout android:layout_width="0dp" android:layout_weight="1"
                                 android:layout_height="wrap_content" android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                    android:text="Date" android:textSize="11sp" android:textColor="@color/textSecondary" />
+                                    android:text="@string/label_date" android:textSize="11sp" android:textColor="@color/textSecondary" />
                                 <TextView android:id="@+id/tv_date" android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" android:textSize="15sp" android:textColor="@color/textPrimary" />
                             </LinearLayout>
                             <LinearLayout android:layout_width="0dp" android:layout_weight="1"
                                 android:layout_height="wrap_content" android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                    android:text="Category" android:textSize="11sp" android:textColor="@color/textSecondary" />
+                                    android:text="@string/label_category" android:textSize="11sp" android:textColor="@color/textSecondary" />
                                 <TextView android:id="@+id/tv_category" android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" android:textSize="15sp" android:textColor="@color/textPrimary" />
                             </LinearLayout>
                         </LinearLayout>
 
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Notes" android:textSize="11sp" android:textColor="@color/textSecondary"
+                            android:text="@string/label_notes" android:textSize="11sp" android:textColor="@color/textSecondary"
                             android:layout_marginTop="12dp" />
                         <TextView android:id="@+id/tv_notes" android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:textSize="14sp" android:textColor="@color/textPrimary" />
@@ -127,7 +128,6 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <!-- EDIT MODE -->
             <LinearLayout
                 android:id="@+id/group_edit_mode"
                 android:layout_width="match_parent"
@@ -137,7 +137,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:hint="Merchant" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/label_merchant" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_merchant" android:layout_width="match_parent" android:layout_height="wrap_content" />
@@ -145,7 +145,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:hint="Date" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/label_date" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_date" android:layout_width="match_parent" android:layout_height="wrap_content" />
@@ -153,7 +153,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:hint="Amount" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/label_amount" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_amount" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:hint="Notes" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/label_notes" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginBottom="16dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_notes" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -176,7 +176,7 @@
                     android:id="@+id/btn_save"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:text="Save Changes" />
+                    android:text="@string/btn_save_changes" />
             </LinearLayout>
 
         </LinearLayout>

@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="@color/background">
 
-    <!-- Search and Filter Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +18,7 @@
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:queryHint="Search by merchant..."
+            app:queryHint="@string/search_hint_merchant"
             app:iconifiedByDefault="false"
             android:layout_marginBottom="8dp" />
 
@@ -27,20 +26,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:baselineAligned="false"
             android:gravity="center_vertical">
 
             <Spinner
                 android:id="@+id/spinner_category"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_date_filter"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:text="Dates"
+                android:layout_height="48dp"
+                android:text="@string/btn_date_filter"
                 android:textSize="12sp"
                 android:layout_marginEnd="4dp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
@@ -48,8 +48,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_clear_filters"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:text="Clear"
+                android:layout_height="48dp"
+                android:text="@string/btn_clear_filters"
                 android:textSize="12sp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
         </LinearLayout>
@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="12dp"
-        android:text="0 receipts"
+        android:text="@plurals/receipt_count"
         android:textSize="12sp"
         android:textColor="@color/textSecondary" />
 
@@ -68,7 +68,7 @@
         android:id="@+id/tv_empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No receipts found"
+        android:text="@string/empty_receipts_message"
         android:textColor="@color/textSecondary"
         android:gravity="center"
         android:padding="48dp"

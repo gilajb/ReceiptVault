@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="12dp"
+        android:baselineAligned="false"
         android:gravity="center_vertical">
 
-        <!-- Category color indicator -->
         <View
             android:id="@+id/sync_indicator"
             android:layout_width="4dp"
@@ -34,7 +34,7 @@
                 android:id="@+id/tv_merchant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Merchant"
+                android:text="@string/placeholder_merchant"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/textPrimary" />
@@ -43,20 +43,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:baselineAligned="false"
                 android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date"
+                    android:text="@string/placeholder_date"
                     android:textSize="12sp"
                     android:textColor="@color/textSecondary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" • "
+                    android:text="@string/label_separator"
                     android:textSize="12sp"
                     android:textColor="@color/textSecondary" />
 
@@ -64,7 +65,7 @@
                     android:id="@+id/tv_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Category"
+                    android:text="@string/placeholder_category"
                     android:textSize="12sp"
                     android:textColor="@color/colorPrimary" />
             </LinearLayout>
@@ -74,7 +75,7 @@
             android:id="@+id/tv_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$0.00"
+            android:text="@string/placeholder_amount_zero"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textPrimary" />

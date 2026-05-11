@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -18,12 +19,12 @@
             android:layout_marginTop="40dp"
             android:layout_marginBottom="16dp"
             android:src="@drawable/ic_receipt_vault_logo"
-            android:contentDescription="Logo" />
+            android:contentDescription="@string/desc_app_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Receipt Vault"
+            android:text="@string/app_name_vault"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
@@ -32,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Smart Receipt Scanner &amp; Tracker"
+            android:text="@string/app_tagline"
             android:textSize="14sp"
             android:textColor="@color/textSecondary"
             android:layout_marginBottom="40dp" />
@@ -40,7 +41,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/hint_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginBottom="16dp">
 
@@ -55,11 +56,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/hint_password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:passwordToggleEnabled="true"
-            android:layout_marginBottom="24dp"
-            xmlns:app="http://schemas.android.com/apk/res-auto">
+            android:layout_marginBottom="24dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"
@@ -73,7 +73,7 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Sign In"
+            android:text="@string/btn_sign_in"
             android:textSize="16sp"
             android:layout_marginBottom="16dp" />
 
@@ -81,7 +81,7 @@
             android:id="@+id/btn_google_sign_in"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Continue with Google"
+            android:text="@string/btn_google_sign_in"
             android:textSize="16sp"
             android:layout_marginBottom="24dp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
@@ -101,14 +101,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account? "
+                android:text="@string/label_no_account"
                 android:textColor="@color/textSecondary" />
 
             <TextView
                 android:id="@+id/tv_sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="@string/btn_sign_up"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
         </LinearLayout>
